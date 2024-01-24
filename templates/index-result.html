@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <title>Bookscraper</title>
+</head>
+<body>
+    <div class="background-image"></div>
+    
+    <div class="search-container">
+        <form action="/result" method="post">
+            <input type="text" name="url" class="search-input" placeholder="Enter Goodreads URL...">
+            <button type="submit" class="search-button">Go!</button>
+        </form>
+    </div>
+
+    <div class="book-container">
+        <div class="book-name">{{ book_info['title'] }}</div>
+        <div class="book_info">
+            <div class="book_author">{{ book_info['authors'] }}</div>
+        </div>
+    </div>
+    <div class="author-img-container">
+        <img src="{{ book_info['author_img'] }}" alt="Author Image" class="author-image">
+    </div>
+    <div class="book-cp">
+        <div class="book-cover">
+            <img src="{{ book_info['book_image_cover'] }}" alt="Book Image" class="book-image">
+        </div>
+        <div class="book-plot">
+            {{ book_info['book_plot'] }}
+        </div>
+
+        <div class="container">
+            <div class="box">Publication_Info: {{ book_info['publication_info'] }}</div>
+            <div class="box">Pages-Format: {{ book_info['pages_format'] }}</div>
+            <div class="gen-box">Genres: {{ ', '.join(book_info['genres']) }}</div>
+            <div class="box">Ratings: {{ book_info['ratings_count'] }}</div>
+            <div class="box">Reviews: {{ book_info['reviews_count'] }}</div>
+        </div>
+    </div>
+    <footer class="footer">
+        Made with ❤️ by Krishyogee
+    </footer>
+</body>
+</html>

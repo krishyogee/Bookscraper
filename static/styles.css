@@ -1,0 +1,252 @@
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Place the background behind other elements */
+}
+
+.search-container {
+    position: absolute;
+    top: 0%;
+    left: 50%; /* Set left to 50% to position the container from the middle */
+    transform: translateX(-50%); /* Use transform to adjust the position based on half of the container's width */
+    display: flex;
+    justify-content: space-between;
+    width: 500px; /* Adjust the width as needed */
+    margin: 20px auto 100px auto; /* Adjust the margin as needed (top value is reduced) */
+    padding: 10px;
+    border-radius: 15px; /* Adjust the border-radius for curvature */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px; /* Add some spacing between input and button */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #443737; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.search-button:hover {
+    background-color: #332626; /* Button background color on hover */
+}
+
+
+.book-container {
+    display: flex;
+    align-items: center;
+    margin: 120px auto 30px;
+}
+
+.book-name {
+    flex: 0 0 auto; /* Prevent it from growing, allow it to shrink, set initial width to auto */
+    height: 35px;
+    background-color: #dfd3c3;
+    border: 2px solid #000;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex; /* Make it a flex container */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 22px; /* Adjust the font size as needed */
+    font-family: 'Bebas Neue', sans-serif;
+    width: auto; /* Allow the width to adjust based on content */
+    padding: 5px;
+}
+
+.book_info {
+    width: 30%;
+}
+
+.book_author {
+    height: 35px;
+    background-color: #dfd3c3;
+    border: 2px solid #000;
+    border-radius: 15px;
+    position: relative;
+    margin-right: 10px;
+    display: inline-flex; /* Make it an inline flex container */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+
+}
+
+
+.author-img-container {
+    max-width: 100%; /* Set the maximum width to be responsive */
+    max-height: 100%; /* Set the maximum height to be responsive */
+    border-radius: 50%; /* Use border-radius to create a circle */
+    background-color: #dfd3c3; /* Set the background color as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Set the text color as needed */
+    position: fixed;
+    top: 35%;
+    right: 20px; /* Adjust the right distance as needed */
+    transform: translateY(-50%);
+    padding: 5px;
+}
+
+.author-image {
+    max-width: 100%; /* Ensure the image does not exceed its container */
+    max-height: 100%; /* Ensure the image does not exceed its container */
+    border-radius: 50%; /* Use border-radius to create a circle */
+}
+
+
+.book-cover {
+    max-width: 300px; /* Set the maximum width for the book cover */
+    max-height: 400px; /* Set the maximum height to be responsive */
+    background-color: #dfd3c3;
+    border: 2px solid #000;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 15px;
+    display: flex; /* Make it a flex container */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.book-image {
+    width: 90%; /* Set width to 100% for responsiveness */
+    max-height: 90%; /* Ensure the image does not exceed its container */
+    border-radius: 15px; /* If you want to apply border-radius to the image */
+}
+
+
+
+.book-plot {
+    width: 600px; /* Set a specific width for the book cover */
+    background-color: #dfd3c3;
+    border: 2px solid #000;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+
+.book-cp {
+    display: flex;
+    align-items: center;
+    margin: 12px auto 30px;
+}
+
+
+.book-cover,
+.book-plot,
+.container {
+    flex: 1; /* Distribute remaining space evenly among these items */
+}
+
+.container {
+    height: 303px;
+    margin-left: 10px; /* Adjust the margin as needed for spacing between book-cover and container */
+}
+
+.box {
+    width: 250px;
+    height: 50px;
+    background-color: #dfd3c3;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    display: flex; /* Make it a flex container */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-family: 'Walter Turncoat', cursive;
+    padding: 5px;
+}
+
+.gen-box {
+    height: 50px;
+    background-color: #dfd3c3;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    display: flex; /* Make it a flex container */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-family: 'Walter Turncoat', cursive;
+    padding: 5px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    margin: 0; /* Remove default margin */
+}
+
+.search-container {
+    flex: 1; /* Make the search container take remaining vertical space */
+}
+
+.footer { 
+    color: #fff; /* Set the text color */
+    padding: 10px; /* Add padding to the footer */
+    text-align: center; /* Center-align the content */
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+
+.info-button {
+    position: fixed;
+    top: 10px; /* Adjust the distance from the top as needed */
+    right: 10px; /* Adjust the distance from the right as needed */
+    background-color: #fff; /* Set the background color */
+    color: #443737; /* Set the text color */
+    font-size: 20px;
+    width: 20px; /* Set the width and height to make it a circle */
+    height: 20px;
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.info-button:hover::after {
+    content: "Hey there! This is a BookScraping site that displays details of the books that spark your interest...and oopsie, make sure the link you provide is from Goodreads website";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+.info-button:hover::after {
+    display: block;
+}

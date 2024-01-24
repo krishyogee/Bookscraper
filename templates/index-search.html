@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon.png"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet">
+    <title>Bookscraper</title>
+</head>
+<body>
+    <div class="background-image"></div>
+    
+    <div class="search-container">
+        <form action="/result" method="post">
+            <input type="text" name="url" class="search-input" placeholder="Enter Goodreads URL...">
+            <button type="submit" class="search-button">Go!</button>
+        </form>
+    </div>
+    <a href="#" class="info-button">i</a>
+    <footer class="footer">
+            Made with ❤️ by Krishyogee
+    </footer>
+</body>
+</html>
